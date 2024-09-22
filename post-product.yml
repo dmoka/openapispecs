@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: Product API
+  description: API for managing products
+  version: 1.0.0
+paths:
+  /product:
+    post:
+      summary: Create a new product
+      description: This endpoint allows the creation of a new product.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the product
+                  example: "Smartphone"
+                price:
+                  type: number
+                  description: The price of the product
+                  example: 299.99
+                description:
+                  type: string
+                  description: A brief description of the product
+                  example: "A high-end smartphone with excellent features"
+              required:
+                - name

@@ -19,6 +19,10 @@ paths:
                   type: string
                   description: The name of the product
                   example: "Smartphone"
+                category:
+                  type: string
+                  description: The category of the product
+                  example: "Electronics"
                 price:
                   type: number
                   format: float
@@ -26,6 +30,7 @@ paths:
                   example: 299.99
               required:
                 - name
+                - category
                 - price
       responses:
         '201':
@@ -43,6 +48,10 @@ paths:
                     type: string
                     description: The name of the product
                     example: "Smartphone"
+                  category:
+                    type: string
+                    description: The category of the product
+                    example: "Electronics"
                   price:
                     type: number
                     format: float

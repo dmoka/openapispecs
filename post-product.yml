@@ -29,3 +29,33 @@ paths:
                   example: "A high-end smartphone with excellent features"
               required:
                 - name
+                - price
+                - description
+      responses:
+        '201':
+          description: Product created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: The unique identifier for the created product
+                    example: "12345"
+                  name:
+                    type: string
+                    description: The name of the product
+                    example: "Smartphone"
+                  price:
+                    type: number
+                    description: The price of the product
+                    example: 299.99
+                  description:
+                    type: string
+                    description: The description of the product
+                    example: "A high-end smartphone with excellent features"
+        '400':
+          description: Invalid input, object invalid
+        '500':
+          description: Internal server error

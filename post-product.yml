@@ -21,16 +21,12 @@ paths:
                   example: "Smartphone"
                 price:
                   type: number
-                  description: The price of the product
+                  format: float
+                  description: The price of the product in decimal format
                   example: 299.99
-                description:
-                  type: string
-                  description: A brief description of the product
-                  example: "A high-end smartphone with excellent features"
               required:
                 - name
                 - price
-                - description
       responses:
         '201':
           description: Product created successfully
@@ -49,12 +45,9 @@ paths:
                     example: "Smartphone"
                   price:
                     type: number
-                    description: The price of the product
+                    format: float
+                    description: The price of the product in decimal format
                     example: 299.99
-                  description:
-                    type: string
-                    description: The description of the product
-                    example: "A high-end smartphone with excellent features"
         '400':
           description: Invalid input, object invalid
         '500':
